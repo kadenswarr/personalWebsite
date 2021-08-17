@@ -1,3 +1,12 @@
+html {
+  min-height: 100%;
+  background: linear-gradient(to bottom right, #0095ff, #0255a4);
+}
+
+hr.solid {
+  border-top: 3px solid #ffff;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;

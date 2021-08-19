@@ -1,10 +1,17 @@
 html {
   min-height: 100%;
-  background: linear-gradient(to bottom right, #0095ff, #0255a4);
+  background: linear-gradient(to bottom right, #0095ff, #18181b);
 }
 
 hr.solid {
   border-top: 3px solid #ffff;
+}
+
+.projects {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: 1fr;
 }
 
 /* Add a black background color to the top navigation */

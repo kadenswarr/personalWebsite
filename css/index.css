@@ -29,6 +29,10 @@ hr.solid {
   height:60px;
 }
 
+.important {
+  margin: 5px;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
@@ -45,10 +49,20 @@ hr.solid {
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
+.nav-link {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav-link:hover {
+  cursor: pointer;
   background-color: #ddd;
   color: black;
+
 }
 
 /* Add a color to the active/current link */
@@ -59,6 +73,6 @@ hr.solid {
 
 .sticky {
   position: fixed;
-  top: 0;
+  top: 0px;
   width: 100%
 }

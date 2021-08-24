@@ -1,16 +1,35 @@
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {stickyAdder()};
 
 // Get the header
-var header = document.getElementsByClassName("topnav")[0];
+const navBar = document.getElementsByClassName("topnav")[0];
+const navBarHeight = navBar.offsetHeight;
+const sticky = navBar.offsetTop;
 
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
+const sections = document.getElementsByClassName("important");
+const navLinks = document.getElementsByClassName("nav-link");
 
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+function stickyAdder() {
+  const yOffset = window.pageYOffset - navBarHeight;
+  if (yOffset > sticky) {
+    navBar.classList.add("sticky");
   } else {
-    header.classList.remove("sticky");
+    navBar.classList.remove("sticky");
   }
 }
+
+//function below is not responsive
+const linkOnClick = () => {
+  for(var i=0; i < navLinks.length; i++){
+    const headerHeight = (sections[i].offsetTop - navBarHeight - 48);
+    console.log(headerHeight, sections[i].offsetTop)
+    navLinks[i].addEventListener("click", function(){
+      console.log(headerHeight)
+      window.scrollTo(0 , headerHeight);
+    })
+  }
+}
+
+linkOnClick();
+//add function that changes the color of the navbar when you scroll
+//when clicking on a navbar link the navbar covers the header
+//add a fixed css class so then you scroll the header and navbar stay together

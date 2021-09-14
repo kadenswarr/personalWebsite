@@ -22,6 +22,21 @@ hr.solid {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: 1fr;
 }
+.game-container {
+  border: 1px solid #333;
+  background-color: white;
+  margin: 10px;
+  padding: 5px;
+  width: auto;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ball {
+  /* size: 1em; */
+}
 
 .footer {
   bottom:0;

@@ -12,6 +12,14 @@ hr.solid {
   border-top: 3px solid #ffff;
 }
 
+.ball {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  background: #e03131;
+  transition: all 1.5s linear;
+}
 .content {
   padding: 10px;
   margin: 10px;
@@ -23,7 +31,7 @@ hr.solid {
   grid-template-rows: 1fr;
 }
 .game-container {
-  border: 1px solid #333;
+  border: 5px solid #333;
   background-color: white;
   margin: 10px;
   padding: 5px;
@@ -32,10 +40,7 @@ hr.solid {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.ball {
-  /* size: 1em; */
 }
 
 .footer {
@@ -90,4 +95,8 @@ hr.solid {
   position: fixed;
   top: 0px;
   width: 100%
+}
+
+.moveRight {
+  transform: translateX(200px);
 }
